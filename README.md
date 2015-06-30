@@ -20,3 +20,10 @@ ln -s /etc/flume/conf flume/conf
 /usr/hdp/current/kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1 --topic fromFlume --create --partitions 1 --replication-factor 1
 /usr/hdp/current/kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1 --list
 ```
+
+##usage
+
+###send data to flume
+```
+curl -X POST -H 'Content-Type: application/json' -d '[{"headers" : {"timestamp" : "434324343","host" : "random_host.example.com"},"body" : "random_body"}]' http://192.168.200.5:1337 
+```
