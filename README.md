@@ -1,6 +1,7 @@
 # WHX-storm-frauddetection
 
 ## replace flume 1.5 for 1.6 (if necessary, we need for the kafka libraries)
+stop flume on ambari
 ```
 cd /root
 wget http://psg.mtu.edu/pub/apache/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz
@@ -12,6 +13,7 @@ ln -s /usr/hdp/2.2.6.0-2800/apache-flume-1.6.0-bin/ ./flume
 mv flume/conf flume/conf-old
 ln -s /etc/flume/conf flume/conf
 ```
+start flume on ambari
 
 ## configuration
 
